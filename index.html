@@ -3,31 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Mart's AR Testground</title>
+    <title>Eieren zoeken</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script src="ar.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css"/>
   </head>
 
   <body style="margin: 0; overflow: hidden;">
     <a-scene
-      cursor="rayOrigin: mouse; fuse: true; fuseTimeout: 0;"
-      raycaster="objects: [gps-entity-place];"
       vr-mode-ui="enabled: false"
       embedded
-      arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
+      arjs="sourceType: webcam; debugUIEnabled: false;"
     >
       <a-assets>
-        <img id="easter-egg" src="images/egg.png" />
         <img id="map-marker" src="images/map-marker.png" />
       </a-assets>
 
-      <a-camera gps-camera="minDistance: 20;" rotation-reader> </a-camera>
+      <a-camera gps-camera look-controls wasd-controls position="0 1.6 0">
+        <a-cursor></a-cursor>
+      </a-camera>
     </a-scene>
-    <div class="centered">
-        <button onclick="toggleScale()">Markers groter/kleiner</button>   
-    </div>
   </body>
 </html>

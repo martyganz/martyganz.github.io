@@ -10,12 +10,3 @@
     left: 0;
     right: 0;
 }
-
-button {
-    background: orange;
-    bottom: 5%;
-    text-transform: uppercase;
-    color: white;
-    padding: 20px;
-    height: 60px;
-}
