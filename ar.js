@@ -56,6 +56,14 @@ function loadPlaces() {
                 lat: 52.234632,
                 lng: 6.492949
             }
+        },
+        {
+            id: 7,
+            name: 'Bergweg',
+            location: {
+                lat: 52.232836,
+                lng: 6.491907
+            }
         }
     ];
 }
